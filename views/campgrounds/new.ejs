@@ -1,0 +1,54 @@
+<% layout('layouts/boilerplate.ejs') %>
+<div class="col-md-6 offset-md-3">
+    <div class="row ">
+        <h1 class="text-center">New Campground</h1>
+        <form action="/campgrounds" method="POST" novalidate class="validated-form">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="campground[title]" required>
+                <div class="valid-feedback">
+                    Looks good!!!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" required id="location" name="campground[location]">
+
+                <div class="valid-feedback">
+                    Looks good!!!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image Url</label>
+                <input type="text" class="form-control" required name="campground[image]" id="image">
+                <div class="valid-feedback">
+                    Looks good!!!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Campground Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" placeholder="0" name="campground[price]" required class="form-control"
+                        aria-describedby="basic-addon1">
+                    <div class="valid-feedback">
+                        Looks good!!!
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="campground[description]" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!!!
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class=" btn btn-success">Add Campground</button>
+            </div>
+        </form>
+        <a href="/campgrounds">All Campgrounds</a>
+    </div>
+
+
+</div>
